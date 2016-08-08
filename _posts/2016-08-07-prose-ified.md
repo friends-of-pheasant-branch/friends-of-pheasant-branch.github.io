@@ -2,6 +2,7 @@
 published: true
 tags:
   - bananas
+layout: post
 ---
 ## A New with Prose
 
