@@ -14,6 +14,35 @@ description: > # this means to ignore newlines until "baseurl:"
   Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://friendsofpheasantbranch.org" # the base hostname & protocol for your site
+prose:
+  rooturl: "_posts"
+  ignore: [
+    '_config.yml',
+    'index.html',
+    '/_includes',
+    '/_layouts',
+    '/_sass'
+    ]
+  metadata:
+    _posts:
+      - name: "published"
+        field:
+          element: "hidden"
+          value: "true"
+      - name: "tags"
+        field:
+          element: "multiselect"
+          label: "Add Tags"
+          placeholder: "Choose Tags"
+          options:
+            - name: "Apples"
+              value: "apples"
+            - name: "Bananas"
+              value: "bananas"
+            - name: "Pears"
+              value: "pears"
+            - name: "Mangos"
+              value: "mangos"
 
 # Build settings
 markdown: kramdown
