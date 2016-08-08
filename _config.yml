@@ -29,20 +29,22 @@ prose:
         field:
           element: "hidden"
           value: "true"
-      - name: "tags"
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "post"
+      - name: "category"
         field:
           element: "multiselect"
-          label: "Add Tags"
-          placeholder: "Choose Tags"
+          label: "Add Category"
+          placeholder: "Select a Category"
           options:
-            - name: "Apples"
-              value: "apples"
-            - name: "Bananas"
-              value: "bananas"
-            - name: "Pears"
-              value: "pears"
-            - name: "Mangos"
-              value: "mangos"
+            - name: "Restore"
+              value: "restore"
+            - name: "Education"
+              value: "education"
+            - name: "Watershed"
+              value: "watershed"
 
 # Build settings
 markdown: kramdown

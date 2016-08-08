@@ -1,7 +1,7 @@
 ---
 published: true
-tags:
-  - bananas
+category:
+  - restore
 layout: post
 ---
 ## A New with Prose
