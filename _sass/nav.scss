@@ -1,0 +1,91 @@
+.top-bar {
+  height: 6px;
+  background: $green;
+  border-bottom: 4px solid lighten($green, 20%);
+}
+
+.fre-dropover:before {
+  display: none;
+  @include phones {
+    display: block;
+    content: attr(data-description)" ";
+    padding: 12px 15px;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 12px;
+    color: lighten($text, 7.5%);
+  }
+}
+.fre-dropover.active:before {
+  border-top: 2px solid $primary;
+  margin-top: -2px;
+  background: $sand;
+  color: $primary;
+
+}
+// Navbar
+.fre-navbar.navbar {
+  position: relative;
+  z-index: 900;
+  min-height: 34px;
+  border: none;
+  border-radius: 0px;
+  background: $sand;
+  margin-bottom: 0px;
+  @include phones {
+    background: darken($sand, 3.5%);
+    margin-bottom: 16px;
+  }
+  // mobile only
+  .navbar-header {
+    background: $sand;
+    border: 1px solid $lines;
+    .navbar-toggle {
+      border-radius: 0px;
+      border: none;
+      padding: 8px 10px;
+      color: $primary;
+      &:hover,
+      &:active,
+      &:visited,
+      &:focus {
+        background: transparent;
+      }
+    }
+  }
+  &.navbar-default .navbar-nav>.active {
+    >a,
+    >a:focus,
+    >a:hover {
+      background-color: $sand;
+      color: $primary;
+      border-top: 2px solid $primary;
+      @include phones {
+        border-left: 1px solid $lines;
+        border-right: 1px solid $lines;
+        margin-top: -2px;
+      }
+    }
+  }
+  &.navbar-default .navbar-nav>.active {
+    position: relative;
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      height: 3px;
+      bottom: -1px;
+      left: 1px;
+      right: 1px;
+      background: $sand;
+    }
+  }
+  li>a {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 12px;
+    color: lighten($text, 7.5%);
+  }
+}

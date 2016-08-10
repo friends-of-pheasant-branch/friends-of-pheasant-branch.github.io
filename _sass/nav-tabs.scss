@@ -1,0 +1,54 @@
+// Tabs
+.fre-tab {
+  .nav-tabs {
+    border-bottom: none;
+    text-align: center;
+    @include phones {
+      border-bottom: 1px solid $lines;
+    }
+  }
+  .nav>li {
+    display: inline-block;
+    float: none;
+    width: 42%;
+    border-bottom: 1px solid $lines;
+    padding: 8px;
+    &.active {
+      border-bottom: 1px solid $primary;
+      @include phones {
+        border: none;
+      }
+    }
+    @include phones {
+      border: none;
+      display: block;
+      float: left;
+      width: inherit;
+      padding: 0;
+    }
+  }
+  .nav-tabs>li>a {
+    color: $text;
+    border-radius: 0px;
+    &:hover {
+      background-color: $white;
+      border: 1px solid transparent;
+      color: darken($primary, 15%);
+      border-bottom-color: transparent;
+      @include phones {
+        border-bottom-color: $lines;
+      }
+    }
+  }
+  .nav-tabs>li.active>a,
+  .nav-tabs>li.active>a:focus,
+  .nav-tabs>li.active>a:hover {
+    color: $primary;
+    cursor: default;
+    background-color: $white;
+    border: 1px solid transparent;
+    @include phones {
+      border-bottom-color: $primary;
+    }
+  }
+}
