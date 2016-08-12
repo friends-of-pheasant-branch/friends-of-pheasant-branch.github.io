@@ -5,10 +5,10 @@
     <div class="cloak"></div>
     <div class="top-bar"></div>
     {% include nav.html %}
-    {% if page.header %}
-      {% include header.html %}
-    {% endif %}
     <div class="container">
+      {% if page.header %}
+        {% include header.html %}
+      {% endif %}
       <div class="row">
         <div class="col-md-8 col-md-offset-2">
           {{ content }}
