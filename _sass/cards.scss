@@ -39,6 +39,9 @@
     height: 150px;
     max-height: 150px;
     overflow: hidden;
+    .fre-cards & {
+      height: auto;
+    }
 
     img {
       @include border-top-radius($base-border-radius);
@@ -56,6 +59,14 @@
     line-height: 1.5em;
     padding: ($base-spacing / 3) ($base-spacing / 2);
     transition: all 0.2s ease-in-out;
+    .fre-cards & {
+      span {
+        background: $green;
+        color: $white;
+        font-size: 12px;
+        padding: 6px;
+      }
+    }
   }
 
   .card-copy {

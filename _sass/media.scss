@@ -17,6 +17,10 @@
   margin-left: -50%;
   position: relative;
   height: auto;
+  max-height: 480px;
+  img {
+    margin-top: -20%;
+  }
   @include phones {
     width: 150%;
     margin-left: -25%;
@@ -28,7 +32,7 @@
 }
 .item {
   width: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .video-wrap {

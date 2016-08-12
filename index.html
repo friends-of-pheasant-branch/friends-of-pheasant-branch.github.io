@@ -4,21 +4,88 @@ header: carousel
 ---
 <article>
   <section>
-    <h1 class="">Posts</h1>
+    <div class="fre-callout">
+      <p class="lead">
+        Welcome,<br> Friends of the Pheasant Branch Conservancy.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem nisi voluptas fugit magni, labore officiis nobis distinctio quae.
+      </p>
+      <button type="button" class="fre-btn btn btn-lg btn-primary">I would like to become a Friend</button>
+      <button type="button" class="fre-btn btn btn-lg btn-orange">I would like to Donate</button>
+    </div>
+  </section>
+  <section class="hr">
+    <h1>
+      Become Involved
+    </h1>
+    <div class="flex-boxes">
+      <a href="javascript:void(0)" class="flex-box flex-box-green">
+        <img src="{{site.baseurl}}/public/img/restore.png"alt="">
+        <h1 class="flex-title flex-title-white">Restore</h1>
+        <p class="flex-p-white">Lorem adipisicing elit. Voluptas consectetur tempora quis nam, officia tenetur blanditiis in illo dolor?</p>
+      </a>
+      <a href="javascript:void(0)" class="flex-box flex-box-rose">
+        <img src="{{site.baseurl}}/public/img/protect.png" alt="">
+        <h1 class="flex-title flex-title-white">Protect</h1>
+        <p class="flex-p-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo obcaecati in provident illo.</p>
+      </a>
+      <a href="javascript:void(0)" class="flex-box flex-box-sky">
+        <img src="{{site.baseurl}}/public/img/promote.png" alt="">
+        <h1 class="flex-title flex-title-white">Promote</h1>
+        <p class="flex-p-white">Lorem ipsum dolor sit amet, elit. Rem, illum.</p>
+      </a>
+    </div>
+  </section>
+  <section class="hr">
+    <h1>
+      Join the Community
+    </h1>
+    <div class="cards">
+      <div class="card">
+        <div class="card-image">
+          <img src="{{site.baseurl}}/public/img/member.png" alt="Friends of the Pheasant Branch Conservancy">
+        </div>
+        <div class="card-header">
+          Join Us
+        </div>
+        <div class="card-copy">
+          {% include blockquote.html quote='I love the Pheasant Branch Conservancy and am proud to be a member of this great community.' person='Henry David Thoreau' location='Middleton, WI'%}
+          <p>
+            <button class="fre-btn btn btn-primary btn-lg">
+              Join Our Community
+            </button>
+          </p>
+        </div>
+      </div>
+    </div>
 
-    <ul class="post-list">
-      {% for post in site.posts limit:3 %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+  </section>
+  <section class="hr">
+    <h1>
+      Upcoming Events
+    </h1>
+    <div class="cards fre-cards">
+    {% for post in site.posts limit:3 %}
+    <div class="card">
+      <div class="card-image">
+        <img src="{{site.baseurl}}/public/img/{{ post.image }}" alt="Responsive image">
+      </div>
+      <div class="card-header">
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span><br>
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </div>
+      <div class="card-copy">
+        {{ post.excerpt }}
+      </div>
+    </div>
+  {% endfor %}
+  </div>
+</section>
+</article>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-      {{ post.excerpt }}
-      {% endfor %}
-    </ul>
-
+<article>
+  <section>
     <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
   </section>
 </article>
