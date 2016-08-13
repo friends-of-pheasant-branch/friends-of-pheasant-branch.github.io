@@ -12,7 +12,7 @@ header: carousel
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem nisi voluptas fugit magni, labore officiis nobis distinctio quae.
       </p>
       <button type="button" class="fre-btn btn btn-lg btn-primary">I would like to become a Friend</button>
-      <button type="button" class="fre-btn btn btn-lg btn-orange">I would like to Donate</button>
+      <a type="button" href="https://www.paypal.com/us/cgi-bin/webscr?cmd=_flow&SESSION=l-c7iVdeRiOFeJx_OWORRuPe9N2ss2bjuc1DMQdZEYyjfk7j7SrgUU4bp10&dispatch=5885d80a13c0db1f8e263663d3faee8de2b8031b89187c030b37e57608011f58" class="fre-btn btn btn-lg btn-orange">I would like to Donate</a>
     </div>
   </section>
   <section class="hr">
@@ -41,7 +41,7 @@ header: carousel
     <h1>
       Join the Community
     </h1>
-    <div class="cards">
+    <div class="cards fre-cards">
       <div class="card">
         <div class="card-image">
           <img src="{{site.baseurl}}/public/img/member.png" alt="Friends of the Pheasant Branch Conservancy">
@@ -67,21 +67,23 @@ header: carousel
     </h1>
     <div class="cards fre-cards">
     {% for post in site.posts limit:3 %}
-    <div class="card">
-      <div class="card-image">
-        <img src="{{site.baseurl}}/public/img/{{ post.image }}" alt="Responsive image">
+      <div class="card">
+        <a href="{{ post.url | prepend: site.baseurl }}">
+          <div class="card-image">
+            <img src="{{site.baseurl}}/public/img/{{ post.image }}" alt="Responsive image">
+          </div>
+          <div class="card-header">
+            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span><br>
+            <p class="post-link">{{ post.title }}</p>
+          </div>
+          <div class="card-copy">
+            {{ post.excerpt }}
+          </div>
+        </a>
       </div>
-      <div class="card-header">
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span><br>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </div>
-      <div class="card-copy">
-        {{ post.excerpt }}
-      </div>
+    {% endfor %}
     </div>
-  {% endfor %}
-  </div>
-</section>
+  </section>
 </article>
 
 <article>

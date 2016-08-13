@@ -16,10 +16,21 @@
   width: 200%;
   margin-left: -50%;
   position: relative;
-  height: auto;
-  max-height: 480px;
+  height: 380px;
+  overflow: hidden;
+  white-space: nowrap;
   img {
-    margin-top: -20%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: auto;
+    height: auto;
+    min-height: 380px;
   }
   @include phones {
     width: 150%;
