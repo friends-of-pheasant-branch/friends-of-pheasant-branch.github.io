@@ -14,7 +14,7 @@ description: 'Write an awesome description for your new site here. You can edit 
   results) and in your feed.xml site description.
 
 '
-baseurl: ''
+baseurl: 
 url: http://friendsofpheasantbranch.org
 prose:
   rooturl: _posts
@@ -29,7 +29,7 @@ prose:
     - name: published
       field:
         element: hidden
-        value: 'true'
+        value: true
     - name: layout
       field:
         element: hidden
