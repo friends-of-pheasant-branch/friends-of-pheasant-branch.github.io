@@ -3,7 +3,7 @@ title: Siteleaf
 date: 2017-05-03 21:25:00 Z
 Field name:
 - 
-layout: page
+layout: post
 ---
 
 This is siteleaf.
